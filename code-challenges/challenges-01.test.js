@@ -129,7 +129,7 @@ const createList = (availableItems) => {
   // Solution code here...
 
   let newList = [];
-  if (availableItems.available === true) {
+  if (available === true) {
     availableItems.forEach(list => {
       newList.push(list.name);
     });
