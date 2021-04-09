@@ -3,15 +3,12 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named addAnimal that takes in array of animals (strings) and some callback function.
 
-This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
-
-Push each updated animal string into the new array. Return the new array.
 
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
+
 
 function upper( str ) {
   return str.toUpperCase();
@@ -29,6 +26,8 @@ const updateAnimal = ( arr, callback ) => {
     newArr.push( x );
   } );
   return newArr ;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,13 +38,16 @@ Write a function called sortNames that takes an array of names and sorts them al
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
+
 const sortNames = ( arr ) => {
   // Solution code here...
   return arr.sort();
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
+
 
 Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest.
 
@@ -58,6 +60,7 @@ const sortNumbers = ( arr ) => {
     return a-b;
   } );
   return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,6 +77,7 @@ const sortBackwards = ( arr ) => {
     return b-a;
   } );
   return arr ;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +93,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 const alphabetize = ( arr ) => {
   // Solution code here...
  return arr.sort();
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,12 +109,14 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
+
 const sortByPrice = ( arr ) => {
   // Solution code here...
   arr.sort( ( a,b )=>{
     return a.price-b.price;
   } );
   return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,6 +128,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = ( arr ) => {
+
   // Solution code here...
 };
 
@@ -130,7 +138,8 @@ CHALLENGE 8 - Stretch Goal
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = ( arr ) => {
+
+const sortByLength = (arr) => {
   // Solution code here...
 };
 
@@ -142,7 +151,8 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbersByLength = ( arr ) => {
+
+const sortNumbersByLength = (arr) => {
   // Solution code here...
 };
 
@@ -152,7 +162,8 @@ CHALLENGE 10 - Stretch Goal
 Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. Do not worry about capitalization or first names.
 ------------------------------------------------------------------------------------------------ */
 
-function Person( firstName, lastName, age ) {
+
+function Person(firstName, lastName, age) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.age = age;
@@ -164,7 +175,9 @@ const people = [
   new Person( 'Stan', 'Seattle', 67 ),
 ];
 
-const sortPeople = ( arr ) => {
+
+
+const sortPeople = (arr) => {
   // Solution code here...
 };
 
@@ -178,7 +191,8 @@ If two people share the same last name, alphabetize on their first name.
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const sortPeopleBetter = ( arr ) => {
+
+const sortPeopleBetter = (arr) => {
   // Solution code here...
 };
 
@@ -190,21 +204,22 @@ Write a function named sortMeetingsByDay that takes in an array of objects, each
 Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
 ------------------------------------------------------------------------------------------------ */
 
-function Meeting( dayOfWeek, start, end ) {
+
+function Meeting(dayOfWeek, start, end) {
   this.dayOfWeek = dayOfWeek;
   this.start = start;
   this.end = end;
 }
 const meetings = [
-  new Meeting( 'Monday', '0900', '1000' ),
-  new Meeting( 'Wednesday', '1300', '1500' ),
-  new Meeting( 'Tuesday', '1145', '1315' ),
-  new Meeting( 'Wednesday', '0930', '1000' ),
-  new Meeting( 'Monday', '0900', '0945' ),
-  new Meeting( 'Friday', '1200', '1345' ),
+  new Meeting('Monday', '0900', '1000'),
+  new Meeting('Wednesday', '1300', '1500'),
+  new Meeting('Tuesday', '1145', '1315'),
+  new Meeting('Wednesday', '0930', '1000'),
+  new Meeting('Monday', '0900', '0945'),
+  new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = ( arr ) => {
+const sortMeetingsByDay = (arr) => {
   // Solution code here...
 };
 
@@ -218,7 +233,7 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = ( arr ) => {
+const sortSchedule = (arr) => {
   // Solution code here...
 };
 
