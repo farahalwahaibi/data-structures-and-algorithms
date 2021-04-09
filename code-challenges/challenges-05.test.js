@@ -6,12 +6,6 @@ CHALLENGE 1 - Review
 Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 1', () => {
-//   test('It should sort the star wars characters by height from tallest to shortest', () => {
-//     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
-//     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-//   })
-// });
 let starWarsPeople = [
   {
     "name": "C-3PO",
@@ -32,19 +26,11 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  for (let index = 0; index < starWarsPeople.length; index++) {
-    starWarsArr.sort((a, b) => {
-      if (a.height[index] < b.height[index]) {
-        return 1;
-      } if (a.height[index] > b.height[index]) {
-        return -1;
-      } else {
-        return 0;
-      }
-    })
-
-  }
-}
+  starWarsArr.sort((a,b)=>{
+    return b.height-a.height;
+  });
+  return starWarsArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -90,8 +76,8 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for (let index = 0; index < str.length; index++) {
-    let y = str.slice(i);
+  for (let index = 0; index <= str.length; index++) {
+    let y = str.slice(index);
     result.push(y);    
   }
   return result;
@@ -107,11 +93,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  // for (let index = 0; index < arr.length; index++) {
-  //   arr.split([index])
-    
-  // }
-  // return arr;
+ return arr.split('');
 };
 
 
@@ -127,9 +109,9 @@ Use slice for this function, maybe more than once. The Array.indexOf() method ma
 Do not use split for this function.
 ------------------------------------------------------------------------------------------------ */
 
-const gruffal
 
-oCrumble = {
+
+const gruffaloCrumble = {
   name: 'How to make a Gruffalo Crumble',
   ingredients: [
     '1 medium-sized Gruffalo',
@@ -161,6 +143,11 @@ oCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(val=>{
+    let y = val.slice(1+ val.indexOf(' '));
+    let x = y.slice(1+ y.indexOf(' '));
+    result.push(x);
+  });
   return result;
 };
 
