@@ -14,6 +14,7 @@ function returnTen( str ){
   y.forEach( val =>{
     arr.push( val );
   } );
+  arr.shift( 1 );
   return arr ;
 }
 
