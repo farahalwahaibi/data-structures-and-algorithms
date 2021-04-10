@@ -9,12 +9,12 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen( str ){
   // Solution code here...
-  // let arr = [];
-  // let y = str.split('',-10);
-  // for ( let index = 0; index < y; index++) {
-  //   arr.push( y[index] );
-  // }
-  // return arr ;
+  let arr = [];
+  let y = str.split( '',10 );
+  y.forEach( val =>{
+    arr.push( val );
+  } );
+  return arr ;
 }
 
 
@@ -86,13 +86,11 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = ( arr ) => {
   // Solution code here...
-  // let y = arr.filter(val=>{
-  //   let x = ['a','e','i','o','u'];
-  //   if(val.includes(x)){
-  //     return 1;
-  //   }
-  // });
-  // return y ;
+  let y = arr.filter( val=>{
+    let x = /[aeiou]/gi;
+    return x.test( val );
+  } );
+  return y ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,10 +103,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = ( forbiddenValues, arr ) => {
   // Solution code here...
-  // let y = arr.filter( ( val )=>{
-  //   !forbiddenValues.includes( val ) ;
-  // } );
-  // return y;
+  let y = arr.filter( val =>{
+    return !forbiddenValues.includes( val ) ;
+  } );
+  return y;
 };
 
 /* ------------------------------------------------------------------------------------------------
